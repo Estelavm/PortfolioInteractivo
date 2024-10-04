@@ -1,0 +1,450 @@
+/* Estilos generales para computadoras de escritorio*/
+/* Utilicé variables para que después sea más rápido cambiar detalles*/
+:root {
+    --primary-color: #6a1b9a;
+    --secondary-color: #9c27b0;
+    --font-family-primary: 'Merriweather', sans-serif;
+    --font-family-secondary: 'Lora', serif;
+    --font-size-base: 16px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: var(--font-family-primary);
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    box-sizing: border-box;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./Images/background_portfolio.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.avatar-tooltip-container {
+    flex: 2;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.avatar {
+    width: auto;
+    height: 90%;
+    object-fit: contain;
+}
+
+.tooltip {
+    position: absolute;
+    top:10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+
+.avatar-tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.avatar-picture-container {
+    display: none;
+}
+
+.monitor-container {
+    position: relative;
+    width: 100%; /* Asegúrate de que el contenedor tenga un ancho completo */
+}
+
+.monitor {
+    width: 50%; /* Ajusta el tamaño según tu diseño */
+    max-width: 300px; /* Un tamaño máximo para el monitor */
+    object-fit: contain; /* Asegúrate de que la imagen se ajuste bien */
+    position: absolute; /* Posicionamos el monitor en el mismo lugar que el tooltip */
+    top: 30vh; /* Alineamos el monitor en la misma posición vertical que el tooltip */
+    left: 90%; /* Alineamos el monitor en la misma posición horizontal que el tooltip */
+    transform: translateX(-50%);
+}
+
+.tooltip-habilidades {
+    position: absolute;
+    top: 35%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    color: black;
+    font-weight: bolder;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip-habilidades h3, .tooltip-habilidades ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.tooltip-habilidades ul li {
+    margin: 5px 0;
+}
+
+
+
+.celular-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.celular {
+    position: absolute;
+        bottom: 34vh; /* Ajusté el celular a 10vh desde la parte inferior */
+        left: 35%; 
+        transform: translateX(-50%); /* Centramos el celular horizontalmente */
+        width: 20vh; /* Tamaño ajustado del celular */
+        max-width: 60%;
+        object-fit: contain;
+}
+
+.form-button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 5vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;  
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+} 
+
+.contact-form h2 {
+    color: var(--primary-color); 
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Quise que se escuchara ni bien entra el usuario pero no me funcionó, así que lo voy a hacer un elemento interactivo con JS*/
+#play_audio {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+#play_audio:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+#play_audio:active {
+    background-color: #4a0072;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 0;
+    margin-top: auto;
+    border: 4px solid #8e44ad;
+    border-radius: 30%;
+    position: absolute;
+    padding: 1%;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+
+/* Puse esta animación por si el usuario no puede escuchar el audio, para que sea evidente con qué objetos interactuar */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.interactive-element {
+    animation: pulse 5s infinite;
+}
+
+/* Media Queries para hacer el diseño responsivo */
+/* Fue lo más desafiante de todo. Traté de hacerlo lo más responsivo posible*/
+@media (max-width:1550px) {
+    .monitor {
+        width: 80%;
+        top:25vh;
+    }
+
+    .celular {
+        width: 15vh;
+        top: 48vh;
+    }
+
+    .tooltip-habilidades {
+        top: 30vh;
+    }
+}
+@media (max-width:1350px) {
+    .monitor {
+        width: 80%;
+        top:30vh;
+    }
+
+    .celular {
+        width: 15vh;
+        top: 48vh;
+    }
+
+    .tooltip-habilidades {
+        top: 30vh;
+    }
+}
+
+@media (max-width:1250px) {
+    .monitor {
+        top: 33vh;
+    }
+}
+
+@media (max-width:1150px) {
+    .monitor {
+        top: 37vh;
+    }
+}
+
+@media (max-width:1050px) {
+    .monitor {
+        top: 37vh;
+        width: 100%;
+    }
+}
+
+@media (max-width:950px) {
+    .monitor {
+        top: 42vh;
+    }
+    .tooltip-habilidades {
+        top: 35vh;
+    }
+    .celular {
+        margin-left: 10vw;
+        top: 50vh;
+    }
+}
+
+@media (max-width:850px) {
+    .monitor {
+        width: 150%;
+        top: 35vh;
+    }
+    .celular {
+        top: 50vh;
+    }
+    .avatar-tooltip-container {
+        width: 50%;
+    }
+    .avatar {
+        width: 35vw;
+    }
+}
+
+@media (max-width:800px) {
+    .monitor {
+        top: 37vh;
+    }
+    .avatar-picture-container {
+        height: 50vh; 
+        width: 20vw; 
+        display: flex;
+        margin-bottom: 30vh;
+        margin-left: 12vh;
+        position: relative;
+    }
+
+    .avatar-picture-container img {
+        width: auto; 
+        height: 40%; 
+    }
+    .avatar {
+        display: none;
+    }
+
+}
+
+@media (max-width: 750px) {
+    .monitor {
+        top: 38vh;
+        left: 10vw;
+    } 
+}
+
+@media (max-width: 700px) {
+    .avatar-tooltip-container {
+        position: absolute;
+        top: 5%;
+        right: 55vw;
+    }
+    .monitor {
+        top: 35vh;
+        left: 50vw;
+        width: 50%;
+    } 
+    .tooltip-habilidades {
+        margin-right: 35vw;
+    }
+
+    .celular-container {
+        position: absolute;
+    }
+    .celular {
+        margin-left: 45vw;
+        top:47vh;
+    }
+}
+
+@media (max-width: 630px) {
+    .monitor {
+        top: 37vh;
+    }
+}
+
+@media (max-width: 600px) {
+    .monitor {
+        top: 40vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .tooltip-habilidades {
+        top: 40vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .monitor {
+        top: 45vh;
+    }
+    .tooltip-habilidades {
+        top: 45vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .monitor {
+        width: 100%;
+        top: 40vh
+    }
+    .picture {
+        position: absolute;
+        right: 0;
+    }
+    .tooltip {
+        margin-left: 20vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .monitor {
+        top: 43vh;
+    }
+}
+

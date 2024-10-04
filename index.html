@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta descripción para SEO -->
+    <meta name="description" content="Portafolio de Estela Menéndez, desarrolladora Front End. Conoce mis habilidades y contactame para proyectos web.">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Mi Portafolio</title>
+</head>
+<body>
+    <!-- Contenedor principal del portafolio -->
+    <main class="main-container">
+
+        <!-- Sección del avatar con tooltip de presentación -->
+        <section class="avatar-tooltip-container">
+            <img src="./Images/avatar.png" class="avatar interactive-element" alt="Avatar" />
+            <div class="avatar-picture-container interactive-element">
+                <img src="./Images/cuadroAvatar.png" alt="Cuadro con la cara del avatar" class="picture">
+            </div>
+            <div class="tooltip">
+                <h1>Hola! Soy Estela Menéndez. Desarrolladora Front End.</h1>
+            </div>
+        </section>
+    
+        <!-- Sección que contiene la imagen del monitor en la que posteriormente con JS haré aparecer las habilidades-->
+        <!-- Sección que contiene el monitor, con tooltip oculto -->
+        <!-- Sección que contiene la imagen del monitor en la que posteriormente con JS haré aparecer las habilidades-->
+        <section class="monitor-container interactive-element">
+            <img src="./Images/Monitor.png" class="monitor" id="Monitor_Habilidades" alt="Monitor">
+            <!-- Tooltip de habilidades -->
+            <div class="tooltip-habilidades" id="tooltip_habilidades">
+                <h3>Habilidades:</h3>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </section>
+        
+
+
+
+        <section class="social-icons">
+            <a href="https://www.linkedin.com/in/estela-ver%C3%B3nica-men%C3%A9ndez-325154236/" class="social-icon" id="linkedin" aria-label="LinkedIn" target="_blank">
+                <img src="./Images/linkedin-square-logo-24.png" alt=" Icono de LinkedIn"/>
+            </a>
+            <a href="https://github.com/Estelavm" class="social-icon" id="github" aria-label="GitHub" target="_blank">
+                <img src="./Images/github-logo-24.png" alt="Icono de GitHub"/>
+            </a>
+        </section>
+    
+        <!-- Sección que contiene la imagen del celular que con un evento de JS hará aparecer el form -->
+        <section class="celular-container interactive-element">
+            <img src="./Images/Celular.png" class="celular" id="celular-form" alt="Celular" />
+        </section>
+    
+        <!-- Sección del formulario y botón para reproducir audio de presentación y mini turorial que habilitaré con JS -->
+        <section class="form-button-container">
+            <button id="play_audio" class="interactive-element" aria-label="Reproducir audio de presentación">Reproducir</button>
+            <div class="form-container">
+                <form class="contact-form" aria-label="Formulario de contacto">
+                    <h2>Contactame</h2>
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div> 
+        </section>
+    </main> 
+    <script src="./Javascript/index.js"></script> 
+</body>
+</html>
