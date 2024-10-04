@@ -60,7 +60,7 @@ playButton.addEventListener('click', () => {
         // Crear el elemento de audio dinámicamente
         audioPlayer = document.createElement('audio');
         audioPlayer.id = 'audio_player';  // Asignamos un id
-        audioPlayer.src = '../Images/Audio_Bienvenida.mp3';  // Cambia esta ruta a la ubicación de tu archivo
+        audioPlayer.src = './Images/Audio_Bienvenida.mp3';  // Cambia esta ruta a la ubicación de tu archivo
         audioPlayer.type = 'audio/mp3';
         audioPlayer.setAttribute('controls', 'true');  // Opcional: Agrega controles
 
