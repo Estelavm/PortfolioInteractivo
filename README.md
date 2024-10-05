@@ -14,5 +14,6 @@ Formulario de contacto: Podes contactarme a través de un formulario interactivo
 
 Tecnologías utilizadas:
 HTML5 y CSS3: Para estructurar y estilizar el contenido.
+JS: Para dar interactividad a los elementos.
 Normalize.css: Para asegurar que el diseño sea consistente entre diferentes navegadores.
 Espero que disfrutes explorando mi portafolio. ¡Gracias por tu interés!

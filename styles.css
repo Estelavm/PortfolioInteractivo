@@ -33,6 +33,7 @@ html, body {
     box-sizing: border-box;
 }
 
+/*Sección del avatar con el tooltip de presentación*/
 .avatar-tooltip-container {
     flex: 2;
     display: flex;
@@ -75,18 +76,19 @@ html, body {
     display: none;
 }
 
+/*Sección del monitor con el tooltip de habilidades*/
 .monitor-container {
     position: relative;
-    width: 100%; /* Asegúrate de que el contenedor tenga un ancho completo */
+    width: 100%; 
 }
 
 .monitor {
-    width: 50%; /* Ajusta el tamaño según tu diseño */
-    max-width: 300px; /* Un tamaño máximo para el monitor */
-    object-fit: contain; /* Asegúrate de que la imagen se ajuste bien */
-    position: absolute; /* Posicionamos el monitor en el mismo lugar que el tooltip */
-    top: 30vh; /* Alineamos el monitor en la misma posición vertical que el tooltip */
-    left: 90%; /* Alineamos el monitor en la misma posición horizontal que el tooltip */
+    width: 50%; 
+    max-width: 300px; 
+    object-fit: contain; 
+    position: absolute; 
+    top: 30vh; 
+    left: 90%; 
     transform: translateX(-50%);
 }
 
@@ -115,8 +117,7 @@ html, body {
     margin: 5px 0;
 }
 
-
-
+/*Sección del celular con el form*/
 .celular-container {
     position: relative;
     width: 100%;
@@ -127,10 +128,10 @@ html, body {
 
 .celular {
     position: absolute;
-        bottom: 34vh; /* Ajusté el celular a 10vh desde la parte inferior */
+        bottom: 34vh;
         left: 35%; 
-        transform: translateX(-50%); /* Centramos el celular horizontalmente */
-        width: 20vh; /* Tamaño ajustado del celular */
+        transform: translateX(-50%); 
+        width: 20vh; 
         max-width: 60%;
         object-fit: contain;
 }
@@ -223,6 +224,7 @@ html, body {
     transform: translateY(2px);
 }
 
+/*Sección de los vínculos a las redes sociales*/
 .social-icons {
     display: flex;
     gap: 15px;
@@ -244,7 +246,6 @@ html, body {
     transform: scale(1.2);
     filter: brightness(1.5);
 }
-
 
 /* Puse esta animación por si el usuario no puede escuchar el audio, para que sea evidente con qué objetos interactuar */
 @keyframes pulse {
